@@ -28,9 +28,6 @@ db.connect(err => {
     }
 });
 
-app.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname, 'index.html'));
-});
 app.post('/add-user', (req, res) => {
     const { name, email, message } = req.body;
 
