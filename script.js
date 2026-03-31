@@ -109,13 +109,13 @@ contactForm.addEventListener('submit', (e) => {
     if (isValid) {
         console.log("Sending to server...");
         
-        fetch('http://localhost:3000/add-user', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify({ name, email, message })
-        })
+    fetch('https://portfolio-project-oke6.onrender.com/add-user', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({ name, email, message })
+    })
         .then(res => res.text())
         .then(data => {
             console.log("Server response:", data);
