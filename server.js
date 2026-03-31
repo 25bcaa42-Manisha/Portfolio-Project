@@ -41,7 +41,7 @@ const sql = "INSERT INTO contact (Name, Gmail, Message) VALUES (?, ?, ?)";
             res.status(500).send(err.message);
         } else {
             console.log("✅ Inserted:", result);
-            res.send("User added successfully!");
+            res.send("Message sent successfully!");
         }
     });
 });
